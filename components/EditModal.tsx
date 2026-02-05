@@ -7,7 +7,6 @@ interface EditModalProps {
   onClose: () => void;
   onSave: (link: LinkItem) => void;
   initialData?: LinkItem | null;
-  categoryId: string;
 }
 
 const PREDEFINED_ICONS = [
@@ -17,7 +16,7 @@ const PREDEFINED_ICONS = [
   '👮', '🧑‍⚖️', '🏧', '🤝', '🔒', '🔑'
 ];
 
-const EditModal: React.FC<EditModalProps> = ({ isOpen, onClose, onSave, initialData, categoryId }) => {
+const EditModal: React.FC<EditModalProps> = ({ isOpen, onClose, onSave, initialData }) => {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [icon, setIcon] = useState('🔗');
