@@ -514,7 +514,7 @@ function App() {
         onClose={() => setIsModalOpen(false)} 
         onSave={handleSaveItem}
         initialData={editingItem}
-        categoryId={editingCategory || ''}
+        // CategoryId removed
       />
 
       <CategoryEditModal
