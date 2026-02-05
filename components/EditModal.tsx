@@ -48,7 +48,7 @@ const EditModal: React.FC<EditModalProps> = ({ isOpen, onClose, onSave, initialD
     }
 
     onSave({
-      id: initialData ? initialData.id : crypto.randomUUID(),
+      id: initialData ? initialData.id : Date.now().toString(36) + Math.random().toString(36).substr(2),
       name,
       url: validUrl,
       icon,
